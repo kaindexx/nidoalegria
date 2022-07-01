@@ -90,22 +90,18 @@
             
         </div>
        </div>
-	
 	<div class="container card">
-    <form action="" name="miform"> {% csrf_token %}
+    <form action="" method="post" name="miform"> {% csrf_token %}
       <div class="campo">
         <label>Buscar</label>
         <input type="text" size="10" name="TextNombre"><br>
-        <input type="submit" name="enviar" value="enviar" >
+        <input type="submit" name="enviar" value="enviar">
       </div>
     </form>
-  </div>
-  <div class="container card">
-      <ul>
-        {% for p in buscar %}
-          <li>{{p.nom_p}}</li>
-        {% endfor %}
-      </ul>
+    <br>
+      {% for m in busqueda %}
+        <li>{{m.nom_p}}</li>
+      {% endfor %}
   </div>
 </div>
 </body>

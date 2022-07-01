@@ -95,7 +95,7 @@
 				<div class="card border border-2 border-dark border rounded-0 bg-primary">
 					<div class="card-body">
 						<h5 class="card-title text-center text-white" style="color: #F8BE59;">>ESCRIBENOS</h5>
-						<form method="post" action="conexio.php">
+						<form method="post"> {% csrf_token %}
 							<div class="mb-4">
 								<input type="text" name="txtName" id="txtName" class="form-control form-control-sm rounded-0 border border-2 border-dark" placeholder="Nombres y apellidos">
 							</div>

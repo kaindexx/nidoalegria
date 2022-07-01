@@ -1,10 +1,12 @@
+from multiprocessing import context
+from pickle import FALSE
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.template import Template, Context
 from django.template.loader import get_template
 import datetime
 
-from tfinalapp.models import Persona
+from tfinalapp.models import Persona, TblContact
 # Create your views here.
 
 
@@ -55,10 +57,20 @@ def galeria(request):
 
 
 def contacto(request):
-    fecha_actual = datetime.datetime.now()
-    plantillaExterna = get_template('contacto.html')
-    documento = plantillaExterna.render({"fecha":fecha_actual})
-    return HttpResponse (documento)
+    context = {}
+    if request.method == 'POST':
+        estado = FALSE
+        cont = TblContact()
+        cont.fldname = request.POST['txtName']
+        cont.fldemail = request.POST['txtEmail']
+        cont.fldcel = request.POST['txtCel']
+        cont.fldmessage = request.POST['txtMessage']
+        cont.save()
+        estado = True
+        context = {
+            "estado":estado
+        }
+    return render(request, 'contacto.html', context)
 
 
 def matricula(request):
@@ -66,7 +78,7 @@ def matricula(request):
 
     if request.POST:
         nom = request.POST['TextNombre']
-        busqueda = Persona.objects.filter(nom_p__contains=nom)
+        busqueda = Persona.objects.filter(nom_p__contains = nom)
     else:
         busqueda = []
-    return render(request, "matricula.html",{"personas":persona, "buscar": busqueda})
+    return render(request, "matricula.html", {"persona":persona, "buscar":busqueda})
