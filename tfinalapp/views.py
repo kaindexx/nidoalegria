@@ -9,7 +9,7 @@ from tfinalapp.models import Persona
 
 
 def saludo(request):
-    return HttpResponse("PROBAMDO sexo sexo")
+    return HttpResponse("PROBAMDO")
 
 
 def principal(request):
