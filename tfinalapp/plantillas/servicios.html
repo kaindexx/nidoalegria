@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nido Alegria</title>
+    <!--Booststrap 5 CSS - JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <!--Ionicons para iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<header>
+	<div>
+		<nav class="navbar navbar-expand-lg type-size color-ex">
+		  <div class="container-fluid">
+			<a href="{% url 'home' %}"> <img src="{%static 'img/logonido.png'%}" alt="logo" width="30px" height="30px"></a>
+			<h1 class="navbar-brand" href="#">Nido Alegria</h1>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Inicio</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="nav-link" href="{% url 'portal' %}">Portal Academico</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="{% url 'metodo' %}">Metodología</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="{% url 'galeria' %}">Galeria</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+				</li>
+				<li>
+					<img class="" src="{%static 'img/wsp.png' %}" alt="whatsapp" width="30px" height="30px">
+				</li>
+			  </ul>
+			</div>
+		  </div>
+	  </nav>
+	</div>
+</header>
+<body>
+	<div class="container my-4">
+		<h1 class="text-center mb-4" style="color: #F8BE59;">Nuestros servicios</h1>
+		<div class="row">
+			<div class="col-md-6 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://static.guiainfantil.com/pictures/articulos/89-la-escuela-infantil-la-escuela-y-los-ninos.jpg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Nido 1-5 años
+						</h5>
+						<p class="small">En el Nido Alegría se ha un espacio cultural y deportivo abierto para los niños de nuestro centro educativo y los de la comunidad. Durante todo el año desarrollamos diversos talleres en donde los chicos pueden incursionar en distintas disciplinas</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://enfamilia.aeped.es/sites/enfamilia.aeped.es/files/images/articulos/escuela.jpg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Guardería 1-5 años
+						</h5>
+						<p class="small">Los padres hoy en día debido al ritmo de vida que se lleva tienen la gran preocupación de encontrar un lugar donde ellos se encuentren seguros y confiados de dejar a sus hijos mientras se encuentran laburando.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://www.bbmundo.com/wp-content/uploads/2018/06/centros-de-estimulacion-temprana-en-cdmx.jpg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Estimulación temprana 6 meses - 2 años
+						</h5>
+						<p class="small">Niños de 6 a 24 meses con el acompañamiento de un padre o apoderado a través de la exploración, manipulación, descubrimiento y relación con otros niños y con su entorno por medio de los sentidos se logra un desarrollo integral optimo</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://img.remediosdigitales.com/bf5814/650_1000_166625171/450_1000.jpg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Talleres 3, 4, 5 años
+						</h5>
+						<p class="small">En el Nido Alegría durante el año escolar se desarrolla diversos talleres culturales y deportivos donde los pequeños de nuestra comunidad donde pueden incursionar en las distintas disciplinas</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://www.bbmundo.com/wp-content/uploads/2018/06/centros-de-estimulacion-temprana-en-cdmx.jpg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Summer School
+						</h5>
+						<p class="small">Un verano creando, jugando y aprendiendo entre amigos con dos grupos por divididos edades: Pequeñitos de 2 y 3 años y Grandecitos de 4 y 5 años.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://static.guiainfantil.com/media/7043/c/asi-es-una-jornada-de-un-bebe-con-una-madre-de-dia-lg.jpg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Jornadas para padres
+						</h5>
+						<p class="small">Nuestra Institución busca brindarles un espacio de asesoría e información sobre el desarrollo de sus hijos, con el propósito de mejorar la comunicación efectiva y desarrollar habilidades para la interacción con niños y niñas de la primera infancia.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://centroarcoiris.com.ar/wp-content/uploads/2021/12/psicopedagogia@2x-1-495x400-1-495x400.png" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Departamento Psicopedagógico
+						</h5>
+						<p class="small">En Nido Alegría hay un constate asesoramiento y comunicación con los padres de familia. Evaluaciones a todos los niños, charlas y conferencias con los psicólogos especializados que nos acompañan.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://us.123rf.com/450wm/paulphoto/paulphoto1601/paulphoto160100063/50548957-retrato-de-ni%C3%B1a-feliz-con-el-libro.jpg?ver=6" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							Biblioteca
+						</h5>
+						<p class="small">Con la finalidad de incentivar la lectura en los niños y colaborar con los padres en el conocimiento de temas de crianza, ponemos a su disposición la biblioteca, con más de 150 cuentos infantiles y 50 libros para los padres.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center px-5 mb-4">
+				<img class="border border-2 border-dark mb-4" src="https://www.britishcouncil.org.mx/sites/default/files/palabras_en_ingles_para_ninos.jpeg" width="200" height="200" align="center">
+				<div class="card border border-2 border-dark border rounded-0" style="background-color: #F8BE59">
+					<div class="card-body">
+						<h5 class="card-title">
+							English for Kids
+						</h5>
+						<p class="small">Ingles para niños con Metodología lúdica y vivencial con pizarra interactiva.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <footer id="sticky-footer" class="flex-shrink-0 py-4 color-ex text-white-50">
+    <div class="container-fluid ui-container">
+      <ion-icon size="large" name="logo-linkedin"></ion-icon>
+      <ion-icon size="large" name="logo-facebook"></ion-icon>
+      <ion-icon size="large" name="logo-twitter"></ion-icon>
+    </div>
+    <div class="text-center p-3">
+      © 2022 Copyright:
+      <a style="color: white;" href="index.html">Nido Alegria</a>
+    </div>
+  </footer>
+</body>
+</html>

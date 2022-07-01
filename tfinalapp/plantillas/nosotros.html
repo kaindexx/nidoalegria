@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nido Alegria</title>
+    <!--Booststrap 5 CSS - JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <!--Ionicons para iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<header>
+  <div>
+      <nav class="navbar navbar-expand-lg type-size color-ex">
+        <div class="container-fluid">
+          <a href="{% url 'home' %}"> <img src="{%static 'img/logonido.png'%}" alt="logo" width="30px" height="30px"></a>
+          <h1 class="navbar-brand" href="#">Nido Alegria</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Inicio</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'portal' %}">Portal Academico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'metodo' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'galeria' %}">Galeria</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+              </li>
+              <li>
+                  <img class="" src="{%static 'img/wsp.png' %}" alt="whatsapp" width="30px" height="30px">
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </div>
+</header>
+<body>
+  <div class="cuerpo">
+    <h1 class="text-center" style="color: #F8BE59;">Nosotros</h1><br>
+    <div class="container">
+      <div class="carousel-inner text-center">
+        <div>
+          <h3 style="color: #F8BE59;">Mas de 10 años de experiencia con tu pequeño</h3>
+          <p class="text-center">El nido Caramelos fue creado con la finalidad de ofrecer un espacio educativo innovador, en donde los papás o futuros papás encuentren una mano amiga, que les brinde apoyo constante, información variada y asesoramiento profesional, enfocado en el afecto y cuidado de cada niño. Nuestro objetivo es brindar una educación integral basado en valores, que se permita a nuestros alumnos ser niños seguros, independientes y emocionalmente
+            sanos y estables.</p>
+        </div>
+        <br>
+  </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="row border-warning">
+          <div class="carousel-inner col">
+              <div><h3 style="color: white;">Misión</h3>
+              <p class="text-center">Estar al servicio del preescolar a través del uso de las nuevas metodologías en
+                  base a una neuroeducación y el desarrollo de inteligencias múltiples, brindar una educación de calidad, respetando al niño de 0 a 6 años en su singularidad, apertura y autonomía, facilitando sus aprendizajes, propiciando un ambiente seguro y apropiado para su desarrollo</p></div>
+          </div>
+          <div class="col">
+          <img class="col-auto img-fluid img-standar2"  src="https://ecologicomontessori.edu.pe/wp-content/uploads/2020/08/kinder-school-ecomont.jpg" alt="imagen1">
+          </div>
+      </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="card">
+        <div class="row bourder">
+          <div class="col">
+              <img class="col-auto img-fluid img-standar2" src="https://colegiovermont.com/wp-content/uploads/2022/01/15.jpeg" class="" alt="...">
+          </div>
+          <div class="col">
+              <h1 class="ui-container" style="color: white;">Visión</h1>
+            <p class="card-text">Ser formadores de niños, padres de familia, profesores, auxiliares y personal en general. Ser un puente sólido de formación entre el hogar y el nido, capacitado, investigando e innovando, haciendo de nuestro Proyecto Educativo un referente de calidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col">
+          <div class="row justify-content-around">
+            <h1 class="text-center" style="color: #F8BE59;">Nuestros Valores</h1>
+              <div class="col-4 text-center border">
+                  Solidaridad
+              </div>
+              <div class="col-4 text-center border">
+                  Puntualidad
+              </div>
+              <div class="col-4 text-center border">
+                  Responsabilidad
+              </div>
+          </div>
+          <div class="row justify-content-around">
+              <div class="col-4 text-center border">
+                  Integridad
+              </div>
+              <div class="col-4 text-center border">
+                  Transparencia
+              </div>
+          </div>
+          <div class="row justify-content-center">
+              <div class="col-4 text-center border">
+                  Respeto
+              </div>
+          </div>
+      </div>
+          <div class="col">
+          <img class="col-auto img-fluid img-standar2" src="https://colegiolasalle.edu.mx/preescolar/wp-content/uploads/2020/06/ni%C3%B1o.jpg" alt="imagen1">  
+        </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-auto">
+        <img class="col-auto img-fluid img-standar2" src="https://www.nidoarcoiris.com/wp-content/uploads/2022/02/DSCF6733-768x512.jpg" alt="imagen1">
+    </div>
+    <div class="col">
+        <h1 class="text-center" style="color: #F8BE59;">Nuestro equipo</h1>
+        <p class="text-center">Somos un equipo lleno de compromiso y responsabilidad para los pequeños y sus familias, teniendo años de experiencia y practicando los valores día a día.
+            Somos profesionales en permanente capacitación profesional y
+            crecimiento personal para brindar lo mejor de cada uno a toda nuestra comunidad y contribuir a un mundo mejor.</p>
+    </div>
+  </div>
+  </div>
+      
+</body>
+<footer id="sticky-footer" class="flex-shrink-0 py-4 color-ex text-white-50">
+  <div class="container-fluid ui-container">
+    <ion-icon size="large" name="logo-linkedin"></ion-icon>
+    <ion-icon size="large" name="logo-facebook"></ion-icon>
+    <ion-icon size="large" name="logo-twitter"></ion-icon>
+  </div>
+  <div class="text-center p-3">
+    © 2022 Copyright:
+    <a style="color: white;" href="index.html">Nido Alegria</a>
+  </div>
+</footer>
+</html>

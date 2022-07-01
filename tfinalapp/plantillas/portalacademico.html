@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nido Alegria</title>
+    <!--Booststrap 5 CSS - JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{%static 'style/style.css' %}">
+    <!--Ionicons para iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<header>
+  <div>
+      <nav class="navbar navbar-expand-lg type-size color-ex">
+        <div class="container-fluid">
+          <a href="{% url 'home' %}"> <img src="{%static 'img/logonido.png'%}" alt="logo" width="30px" height="30px"></a>
+          <h1 class="navbar-brand" href="#">Nido Alegria</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Inicio</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'portal' %}">Portal Academico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'metodo' %}">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'galeria' %}">Galeria</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+              </li>
+              <li>
+                  <img class="" src="{%static 'img/wsp.png' %}" alt="whatsapp" width="30px" height="30px">
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </div>
+</header>
+<body>
+  <div class="contaimer-fluid">
+    <div class="cuerpo type-size">
+      <h1 class="text-center" style="color: #F8BE59;" >PORTAL ACADEMICO</h1><br>
+	<center>
+	<div class="container">
+	   <h3> DATOS DEL NIÑO </h3>
+	   <section id="formulario">
+			<form type="nuevo usuario" method="post"action="php/ConexionCrearUsuario.php">
+				nombre:<br>
+				<input type="text" name="nombre" placeholder="ingrese su nombre" required> <br>
+				apellidos:<br>
+				<input type="text" name="apellido" placeholder="ingrese su apellido" required> <br>
+				Fecha de nacimiento:<br>
+				<input type="number" name="edad"  min="18"placeholder="dd/mm/aa" required> <br>
+			</section>
+
+      <input type="submit" name="Enviar" class="boton" value="Enviar" />	  
+    </div>	
+			</form>	
+		</section>
+		<br><br>
+		<section id="formulario2">
+		<h3> DATOS DEL APODERADO </h3>
+				nickame:<br>
+				<input type="text" name="nickname"pattern="[a-zA-Z0-9]+" placeholder="ingrese si nickname" required> <br>
+				contraseña:<br>
+				<input type="password" name="contraeña"  autocomplete="off" placeholder="ingrese contraseña" required> <br>
+		</section>
+ 
+      <input type="submit" name="separar cita" class="boton" value="separar cita" />	  
+    </div>
+    
+  </div>
+ 
+</body>
+<footer id="sticky-footer" class="flex-shrink-0 py-4 color-ex text-white-50">
+  <div class="container-fluid ui-container">
+    <ion-icon size="large" name="logo-linkedin"></ion-icon>
+    <ion-icon size="large" name="logo-facebook"></ion-icon>
+    <ion-icon size="large" name="logo-twitter"></ion-icon>
+  </div>
+  <div class="text-center p-3">
+    © 2022 Copyright:
+    <a style="color: white;" href="% url 'home' %}">Nido Alegria</a>
+  </div>
+</footer>
+</html>
