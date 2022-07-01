@@ -11,7 +11,7 @@ from tfinalapp.models import Persona, TblContact
 
 
 def saludo(request):
-    return HttpResponse("PROBAMDO sexo sexo")
+    return HttpResponse("PROBAMDO")
 
 
 def principal(request):
