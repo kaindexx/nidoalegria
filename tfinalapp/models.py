@@ -125,6 +125,9 @@ class TblContact(models.Model):
     fldcel = models.CharField(db_column='fldCel', max_length=150)  # Field name made lowercase.
     fldmessage = models.TextField(db_column='fldMessage')  # Field name made lowercase.
 
+    def __str__(self):
+        return self.fldname, self.fldemail, self.fldcel, self.fldmessage
+
     class Meta:
         managed = False
         db_table = 'tbl_contact'
