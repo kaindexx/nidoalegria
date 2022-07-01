@@ -91,7 +91,7 @@
         </div>
        </div>
 	
-	<div class="container">
+	<div class="container card">
     <form action="" name="miform"> {% csrf_token %}
       <div class="campo">
         <label>Buscar</label>
@@ -100,7 +100,7 @@
       </div>
     </form>
   </div>
-  <div class="container">
+  <div class="container card">
       <ul>
         {% for p in buscar %}
           <li>{{p.nom_p}}</li>
